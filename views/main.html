@@ -1,0 +1,77 @@
+<div class="row red">
+	<div class="show-for-medium-up medium-6 columns text-center no-padding">
+		<div class="cat-image">
+				<img ng-src="{{ image && image.images.standard_resolution.url || 'img/Cat_Catflix_inicio.svg' }}" fallback-src loading-src alt="" class="cat-img first"/>
+				<img ng-src="{{ secondImage && secondImage.images.standard_resolution.url || 'img/Cat_Catflix_inicio.svg' }}" alt="" class="not-shown cat-img second">
+		</div>
+	</div>
+	<div class="small-12 medium-6 columns text-center no-padding bloody">
+		<div class="logo">
+			<h1></h1>
+			<img class="show-for-small-only" src="img/logo.svg" alt="">
+			<img class="show-for-medium-up logo-img small-svg" src="img/Cat_Catflix_inicio.svg" alt="">
+		</div>
+		<div class="cat-image show-for-small-only">
+			<img ng-src="{{ image && image.images.standard_resolution.url || 'img/Cat_Catflix_inicio.svg' }}" fallback-src loading-src alt="" class="first"/>
+			<img ng-src="{{ secondImage && secondImage.images.standard_resolution.url || 'img/Cat_Catflix_inicio.svg' }}" alt="" class="not-shown second">
+		</div>
+		<div class="blood-red">
+			<a class="kitty-cat" ng-show="!image" ng-click="randomize()">Quieres ver un gatito ? (Haz click aquí)</a>
+			<div class="button-group" ng-show="image">
+				<div class="row padding-top-bot middle">
+					<div class="small-8 columns medium-12 text-center kw">
+						<div class="attribution">
+							<span ng-show="image">Foto compartida por: </span>
+							<br>
+							<a target="_blank" class="first" ng-href="http://www.instagram.com/{{image.user.username}}">@{{image.user.username}}</a>
+							<a target="_blank" class="second not-shown" ng-href="http://www.instagram.com/{{secondImage.user.username}}">@{{secondImage.user.username}}</a>
+						</div>
+					</div>
+					<div class="small-4 medium-12 columns">
+						<div class="row">
+							<div class="medium-12 show-for-medium-up columns text-center">
+								<div class="inline">
+									<button class="icon fb-btn" ng-click="share()"></button>
+									<p class="kw">Share</p>
+								</div>
+								<div class="inline">
+									<button class="icon next-btn" ng-click="randomize()"></button>
+									<p class="kw">Next</p>
+								</div>
+							</div>
+							<div class="small-6 show-for-small-only columns text-center">
+								<button class="icon fb-btn" ng-click="share()"></button>
+								<p class="kw">Share</p>
+							</div>
+							<div class="small-6 show-for-small-only columns">
+								<button class="icon next-btn" ng-click="randomize()"></button>
+								<p class="kw">Next</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+</div>
+<div class="row">
+	<div class="small-12 columns text-center">
+		<div ng-show="image" class="white ">
+			<p class="tip padded">{{tip.content}}</p>
+		</div>
+		<div ng-show="image" class="charity padded">
+			<p class="text-center white-text">Siempre hay un gatito buscando hogar. Puedes visitar fundaciones como esta:</p>
+			<p class="text-center"><a ng-href="{{org.url}}" target="blank">{{org.name}}</a></p>
+			<p class="white-text">Conoces otras fundaciones? <a href="mailto:info@eledelab.co?subject=Catflix%20<3">Escríbenos!</a></p>
+		</div>
+	</div>
+</div>
+<div class="row footer">
+	<div class="columns small-12 foot">
+		<p class="text-center">Hecho con amor por <a href="http://eledelab.co" target="_blank">Elede Lab</a></p>
+	</div>
+</div>
+
+<div class="overlay text-center hide" ng-include="'views/overlay.html'"></div>

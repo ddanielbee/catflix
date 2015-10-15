@@ -1,0 +1,308 @@
+@font-face {
+    font-family: '../fonts/kg_always_a_good_timeregular';
+    src: url('../fonts/kgalwaysagoodtime-webfont.eot');
+    src: url('../fonts/kgalwaysagoodtime-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/kgalwaysagoodtime-webfont.woff2') format('woff2'),
+         url('../fonts/kgalwaysagoodtime-webfont.woff') format('woff'),
+         url('../fonts/kgalwaysagoodtime-webfont.ttf') format('truetype'),
+         url('../fonts/kgalwaysagoodtime-webfont.svg#kg_always_a_good_timeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.blood-red {
+	background: #7F0D25;
+}
+
+
+.button-group button {
+	display: inline-block;
+	margin-bottom: 5px;
+}
+
+.kitty-cat {
+	padding: 20px 0;
+	font-size: 1.5em;
+	display: inline-block;
+}
+
+.button-group {
+	padding: 0 20px;
+}
+
+.red {
+	background-color:#7f0d25;
+}
+
+body {
+	background-color: black;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+
+/*.logo h1{
+	background-image: url("../img/logo.svg");
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 100px;
+}*/
+
+.logo img{
+	margin: 0 auto;
+}
+
+.foot {
+	background: black;
+	color: white;
+	padding: 30px 0;
+}
+
+.foot p {
+	line-height: 0;
+	margin: 0;
+}
+
+.kw, .kw a {
+	font-family: "../fonts/kg_always_a_good_timeregular";
+	color: white;
+}
+
+a {
+	color: #FFE388 !important;
+}
+
+a:visited,  a:active,  a:focus {
+	text-decoration: none;
+}
+
+p {
+	margin: 0;
+}
+
+a:hover {
+	color: #FBC75F !important;
+}
+
+.padding-top-bot {
+	padding: 15px 0;
+}
+
+.next-btn {
+	background: url("../img/next.svg");
+}
+
+.fb-btn {
+	background: url("../img/fb.svg");
+}
+
+button:focus {
+	text-decoration: none;
+	background-color: transparent;
+	outline: none; 
+}
+
+button:hover {
+	background-color: #FBC75F;
+}
+
+.white {
+	background-color: white;
+	color: black;
+}
+
+.tip {
+	padding: 15px 0;
+	font-family: "Roboto Condensed", sans-serif;
+}
+
+.cat-image {
+	background: white;
+}
+
+.icon {
+	border-radius: 20px;
+	height: 40px;
+	width: 40px;
+	max-height: 50px;
+	max-width: 50px;
+	min-height: 30px;
+	min-width: 30px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 0;
+}
+
+.white-text {
+	color: white;
+}
+
+.white p {
+	margin: 0;
+}
+
+.charity p {
+	margin: 0;
+}
+
+.charity {
+	padding: 15px 0;
+}
+
+.white-text a {
+	text-decoration: underline;
+}
+
+.charity {
+	background:#a0172e;
+}
+
+.padded	{
+	padding: 20px;
+}
+
+
+
+@media only screen and (min-width: 640px) {
+	.logo-img {
+		display:none !important;
+	}
+
+	.bloody {
+		background-color: #7F0D25;
+	}
+
+	.kitty-cat {
+		padding: 200px 0 0 0;
+		color: white;
+	}
+
+	.small-svg {
+		margin: 0 auto;
+		width: 50%;
+		max-height: 300px;
+	}
+
+	.icon {
+		background-size: 100%;
+	}
+
+	.kw {
+		margin-bottom: 20px;
+	}
+
+	.inline {
+		display: inline-block;
+		margin-right: 20px;
+	}
+
+	.charity {
+		background: #a0172e;
+		color: white;
+		width: 100%;
+	}
+
+	.cat-image {
+		background: #7f0d25;
+		overflow: hidden;
+	}
+
+	.charity a {
+		color: #FFE388;
+	}
+
+	.charity a:hover {
+		color:#FBC75F;
+	}
+
+	.cat-img {
+		width: 100%;
+		min-width: 400px;
+	}
+
+	.white-back {
+		background: white !important;
+	}
+
+	.padded {
+		padding: 20px 50px;
+	}
+}
+
+
+
+.overlay {
+	opacity: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: rgba(0,0,0,0.7);
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+	padding: 0 20px;
+	color: white;
+}
+
+.overlay ul {
+	list-style: none;
+}
+
+.overlay h3, .overlay h4 {
+	color: white;
+	margin: 20px 0;
+	font-weight: 800;
+}
+
+.opac {
+	opacity: 0 !important;
+}
+
+.close-overlay {
+	position: absolute;
+	right: 20px;
+	top: 10px;
+	cursor: pointer;
+	color: white;
+	font-size: 3em;
+}
+
+.first, .second {
+	-webkit-transition: opacity 0.5s linear;
+	-o-transition: opacity 0.5s linear;
+	transition: opacity 0.5s linear;
+	opacity: 1;
+	height: 100%;
+	width: 100%;
+}
+
+.not-shown {
+	height: 0;
+	opacity: 0;
+	width: 0;
+	visibility: hidden;
+	position: absolute;
+}
+
+.smaller-img {
+	max-width: 400px;
+	margin: 10px 0;
+}
+
+@media only screen and (min-width: 1200px) {
+
+	.padded {
+		padding: 20px 200px;
+	}
+
+	.kitty-cat {
+		padding: 300px 0 0 0;
+	}
+
+	.overlay {
+		padding: 0 200px;
+	}
+}
