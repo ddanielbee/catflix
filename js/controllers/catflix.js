@@ -15,6 +15,11 @@ app.controller('CatflixController', function($scope, $http, $timeout) {
 					1238671294, 1920879414, 529110858, 1440775683, 801187101, 1546047871, 
 					1096012980, 268429181, 1348745935, 1481842968, 1312107038, 1479818392 , 1684510799 , 1639270052 , 1339924497 , 1630096423 , 889428 , 1079034833 , 1538214909 , 1658744594 , 507002007 , 1144489800 , 1332255401 , 437145920 , 1226915244 , 1364954636 , 219401009 , 1303226735 , 1643415476 , 1572551725 , 1438981677 , 478262627 , 489080263 , 801487201 , 1552812396 , 308502673 , 227974241 , 709347464 , 320936424 , 1428638223 , 754972674 , 1070546290 , 1498856090 , 628091073 , 9333759 , 271316406 , 1321926783 , 372908936 , 262984649 , 1787975272 , 202419478 , 644912146 , 1973648437 , 52728167 , 10978059 , 268071787 , 268071787 , 1452211519 , 1575992677 , 1543610248 , 1077647383 , 1481367825 , 1080496548 , 1452381543 , 777846030 , 321086011 , 241853179 , 497525083, 497525083 , 652491125 , 1450074825 , 1635672749 , 2108876572 , 363437976 , 187213235 , 1776549777 , 2103633559];
 
+	/**
+	 * Finds a random picture from a random user and displays it. 
+	 * @author Daniel Bolívar <daniel.bolivar@icloud.com>
+	 * @return {void} 
+	 */
 	$scope.randomize = function() {
 		$http.get('/getContent').success(function(data){
 	        $scope.tip = data.tip;
@@ -43,11 +48,21 @@ app.controller('CatflixController', function($scope, $http, $timeout) {
 	    $(".logo-img").removeClass("logo-img");
 	};
 
+	/**
+	 * Closes an overlay using a css class and a timeout
+	 * @author Daniel Bolívar <daniel.bolivar@icloud.com>
+	 * @return {void} 
+	 */
 	$scope.closeOverlay = function() {
 		$(".overlay").addClass("opac");
 		$timeout(function(){$(".overlay").addClass("hide")}, 500);
 	}
 
+	/**
+	 * Facebook Share function
+	 * @author Daniel Bolívar <daniel.bolivar@icloud.com>
+	 * @return {void} 
+	 */
 	$scope.share = function() {
 		FB.ui({
 			method: 'feed',
@@ -61,6 +76,11 @@ app.controller('CatflixController', function($scope, $http, $timeout) {
 		}, function(response){});
 	};
 
+	/**
+	 * Initializes the instagram picture for the hidden div
+	 * @author Daniel Bolívar <daniel.bolivar@icloud.com>
+	 * @return {void} 
+	 */
 	var secondInit = function() {
 		var currentCat = catUsers[Math.round(Math.random()*(catUsers.length-1))];
 		var userFeed = new Instafeed({
@@ -86,6 +106,11 @@ app.controller('CatflixController', function($scope, $http, $timeout) {
 	    userFeed.run();
 	};
 
+	/**
+	 * Initializes Instagram feed for the first, shown div
+	 * @author Daniel Bolívar <daniel.bolivar@icloud.com>
+	 * @return {void} 
+	 */
 	var init = function() {
 		var currentCat = catUsers[Math.round(Math.random()*(catUsers.length-1))];
 		var userFeed = new Instafeed({
