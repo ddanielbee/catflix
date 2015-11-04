@@ -7,6 +7,8 @@ simple tips about cat care that came directly from our database, (can't share th
 
 The app used Angular.js as front-end framework. 
 
-I was in charge of development of this tiny app. Design and the whole idea came from the team over at [Elede Lab](http://eledelab.co)
+It had a very small development timeframe, just one day, so bugs are sure to exist. If you find any, let me know ! 
 
-You can visit the app and spend some quality cat time at [Catflix](http://catflix.eledelab.co).
+I was in charge of development of this tiny app. Design and the whole idea came from the team over at [Elede Lab](http://elede.milohaus.com), while I was working there. 
+
+You can visit the app and spend some quality cat time at [Catflix](http://catflix.milohaus.com).
